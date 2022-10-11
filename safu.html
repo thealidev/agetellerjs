@@ -1,4 +1,6 @@
-I Am <b id="age"></b> Years Old.
+<center>
+  <h1>I Am <b id="age"></b> Years Old.</h1>
+</center>
 <script>
   const day = 24 * 60 * 60 * 1000;
   const age = document.getElementById("age");
@@ -15,7 +17,7 @@ I Am <b id="age"></b> Years Old.
   }
 
   function update_age() {
-    age.innerHTML = round_to(8, day_diff('Dec 24, 2003 12:00:00', new Date()) / 365);
+    age.innerHTML = round_to(8, day_diff('Feb 05, 2006 12:00:00', new Date()) / 365);
   }
 
   update_age();
