@@ -1,0 +1,50 @@
+<center><h1>AliX Is <b id="alixage"></b> Years Old.</h1></center>
+<center><h1>Safu Is <b id="safuage"></b> Years Old.</h1></center>
+<script>
+  const day = 24 * 60 * 60 * 1000;
+  const alixage = document.getElementById("alixage");
+
+  round_to = function (precision, value) {
+    value = parseFloat(value);
+    power_of_ten = 10 ** precision;
+    return Math.round(value * power_of_ten) / power_of_ten;
+  }
+
+  day_diff = function (d1, d2) {
+    /* totally not borrowed from kristians page */
+    return (d2 - Date.parse(d1)) / day;
+  }
+
+  function update_alixage() {
+    alixage.innerHTML = round_to(8, day_diff('Dec 24, 2003 12:00:00', new Date()) / 365);
+  }
+
+  update_alixage();
+  setInterval(function () {
+    update_alixage();
+  }, 100)
+</script>
+<script>
+  const day = 24 * 60 * 60 * 1000;
+  const safuage = document.getElementById("safuage");
+
+  round_to = function (precision, value) {
+    value = parseFloat(value);
+    power_of_ten = 10 ** precision;
+    return Math.round(value * power_of_ten) / power_of_ten;
+  }
+
+  day_diff = function (d1, d2) {
+    /* totally not borrowed from kristians page */
+    return (d2 - Date.parse(d1)) / day;
+  }
+
+  function update_safuage() {
+    safuage.innerHTML = round_to(8, day_diff('Dec 24, 2003 12:00:00', new Date()) / 365);
+  }
+
+  update_safuage();
+  setInterval(function () {
+    update_safuage();
+  }, 100)
+</script>
