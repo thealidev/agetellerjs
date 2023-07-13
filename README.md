@@ -1,7 +1,7 @@
 # A JS That Auto Keep Updating Your Age
 ## Add it
 ```
-I Am <b id="age"></b> Years Old.
+<h4><center>I Am <b id="age"></b> Years Old.</h4></center>
 <script>
   const day = 24 * 60 * 60 * 1000;
   const age = document.getElementById("age");
